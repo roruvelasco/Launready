@@ -7,7 +7,7 @@ const FeatureSection = () => {
       title: "Seamless Pickup & Drop-off",
       desc: "Book a pickup or drop off in our nearest branch. Your laundry, your way.",
       icon: <Truck />,
-      bgColor: "#0065ff",
+      bgColor: "linear-gradient(90deg, #22d3ee 0%, #2dd4bf 50%, #3b82f6 100%)", // cyan-400, teal-400, blue-500
       delay: 0.3,
     },
     {
@@ -15,7 +15,7 @@ const FeatureSection = () => {
       title: "Accurate Billing, Always",
       desc: "Get notified of the exact weight and final price before you pay.",
       icon: <PhilippinePeso />,
-      bgColor: "#0065ff",
+      bgColor: "linear-gradient(90deg, #22d3ee 0%, #2dd4bf 50%, #3b82f6 100%)", // cyan-400, teal-400, blue-500
       delay: 0.3,
     },
     {
@@ -23,7 +23,7 @@ const FeatureSection = () => {
       title: "Always One Step Ahead",
       desc: "Stay updated effortlessly, so your laundry is ready when you are.",
       icon: <Clock />,
-      bgColor: "#0065ff",
+      bgColor: "linear-gradient(90deg, #22d3ee 0%, #2dd4bf 50%, #3b82f6 100%)", // cyan-400, teal-400, blue-500
       delay: 0.3,
     },
     {
@@ -31,13 +31,13 @@ const FeatureSection = () => {
       title: "Peace of Mind, Guaranteed",
       desc: "Stay confident knowing your laundry is handled with care.",
       icon: <Shield />,
-      bgColor: "#0065ff",
+      bgColor: "linear-gradient(90deg, #22d3ee 0%, #2dd4bf 50%, #3b82f6 100%)", // cyan-400, teal-400, blue-500
       delay: 0.3,
     },
   ];
 
   return (
-    <div className="relative mt-20 border-b border-neutral-300 min-h-[750px] sm:min-h-[600px]">
+    <div className="mt-20 border-b border-neutral-300 min-h-[750px] sm:min-h-[600px]">
       <div
         data-aos="fade-up"
         data-aos-duration="1000"
@@ -51,7 +51,7 @@ const FeatureSection = () => {
 
         <h2 className="text-3xl sm:text-5xl lg-text-6xl mt-10 lg:mt-20 tracking wide">
           Easily track
-          <span className="bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text">
             {" "}
             your laundry
           </span>
@@ -68,11 +68,8 @@ const FeatureSection = () => {
             data-aos-anchor-placement="top-bottom"
             className="w-full sm:w-1/2 p-2"
           >
-            <div className="flex space-x-4 p-6 rounded-xl shadow-[0_0_22px_rgba(0,0,0,0.15)] h-full bg-white">
-              <div
-                style={{ backgroundColor: feature.bgColor }}
-                className="flex h-10 w-10 justify-center items-center rounded-full text-white shrink-0"
-              >
+            <div className="flex space-x-4 p-6 rounded-xl shadow-[0_0_22px_rgba(0,0,0,0.15)] h-full bg-white transition-transform duration-300 hover:scale-105">
+              <div className="flex h-10 w-10 justify-center items-center rounded-full text-white shrink-0 bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500">
                 {feature.icon}
               </div>
               <div>

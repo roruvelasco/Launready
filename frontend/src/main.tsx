@@ -1,3 +1,5 @@
+window.scrollTo(0, 0); // Scrolls to the top on every refresh
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";

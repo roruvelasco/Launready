@@ -42,12 +42,12 @@ const Services = () => {
       <div className="flex flex-wrap items-stretch">
         {serviceData.map((service, index) => (
           <div key={index} className="w-full md:w-1/3 p-2">
-            <div className="p-10 rounded-xl shadow-[0_0_22px_rgba(0,0,0,0.15)] h-full">
+            <div className="p-10 rounded-xl shadow-[0_0_22px_rgba(0,0,0,0.15)] h-full transition-transform duration-300 hover:scale-105">
               <p className="text-4xl mb-8">{service.title}</p>
               <ul>
                 {service.description.map((desc, idx) => (
                   <li key={idx} className="mt-8 flex items-center">
-                    <CircleCheck color="#0065ff" />
+                    <CircleCheck color="#22d3ee" />
                     <span className="ml-2"> {desc}</span>
                   </li>
                 ))}

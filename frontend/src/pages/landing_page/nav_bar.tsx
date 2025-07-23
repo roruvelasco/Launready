@@ -1,5 +1,6 @@
 import { Menu, X, Shirt } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom"; // Add this import
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -7,36 +8,36 @@ const Navbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative text-sm">
+    <nav className="sticky top-0 z-50 py-4 backdrop-blur-lg border-b border-neutral-700/80">
+      <div className="px-4 md:px-8 lg:px-16 mx-auto text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <Shirt className="w-7 h-7 mr-2 text-blue-500" />
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-700 bg-clip-text text-transparent">
+            <Shirt className="w-7 h-7 mr-2 text-cyan-400" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 bg-clip-text text-transparent">
               Launready
             </span>
           </div>
 
-          <ul className="hidden lg:flex ml-14 space-x-12">
+          <ul className="hidden lg:flex ml-14 space-x-12 text-lg">
             <li>
-              <a href="Home">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="Features">Features</a>
+              <a href="#features">Features</a>
             </li>
             <li>
-              <a href="Contact">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
 
-          <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md">
+          <div className="hidden lg:flex space-x-12 items-center">
+            <Link to="/login" className="py-2 px-3 border rounded-md">
               Sign In
-            </a>
+            </Link>
 
             <a
               href="#"
-              className="bg-gradient-to-r from-blue-700 to-blue-500 py-2 px-3 rounded-md"
+              className="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 py-2 px-3 rounded-md"
             >
               <span className="text-white">Get Started</span>
             </a>
@@ -49,23 +50,37 @@ const Navbar = () => {
         </div>
 
         {mobileDrawerOpen && (
-          <div className="backdrop-blur-lg fixed bg-white/90 right-0 z-50 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed bg-white/90 right-0 z-50 w-full p-12 flex flex-col justify-center items-center backdrop-blur-lg lg:hidden">
             <ul>
-              <li className="py-4">Home</li>
-              <li className="py-4">Features</li>
-              <li className="py-4">Contact</li>
+              <div className="flex items-center justify-center">
+                <li className="py-4">
+                  <a href="#home">Home</a>
+                </li>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <li className="py-4">
+                  <a href="#features">Features</a>
+                </li>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <li className="py-4">
+                  <a href="#contact">Contact</a>
+                </li>
+              </div>
             </ul>
 
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
+              <Link to="/login" className="py-2 px-3 border rounded-md">
                 Sign In
-              </a>
-              <a
-                href="#"
-                className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-700 to-blue-500"
+              </Link>
+              <Link
+                to="/login"
+                className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-700 to-blue-500 text-white"
               >
                 Sign In
-              </a>
+              </Link>
             </div>
           </div>
         )}
@@ -75,3 +90,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+// filepath: d:\Launready\frontend\src\pages\landing_page\nav_bar.tsx

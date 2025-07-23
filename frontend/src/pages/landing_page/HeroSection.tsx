@@ -6,11 +6,11 @@ const HeroSection = () => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
         data-aos-anchor-placement="top-bottom"
-        className="font-semibold text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide"
+        className="font-semibold text-4xl sm:text-6xl lg:text-8xl text-center tracking-wide"
       >
         Never stress your
         <br />
-        <span className="bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text">
+        <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-transparent bg-clip-text">
           laundry again
         </span>
       </h1>
@@ -34,7 +34,7 @@ const HeroSection = () => {
       >
         <a
           href="#"
-          className="bg-gradient-to-r from-blue-500 to-blue-700 py-3 px-4 mx-3 rounded-md"
+          className="bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 py-3 px-4 mx-3 rounded-md"
         >
           <span className="text-white">Start Now</span>
         </a>

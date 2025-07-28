@@ -7,11 +7,12 @@ import { useEffect } from "react";
 
 import LandingPage from "./pages/landing_page/landing";
 import LoginPage from "./pages/auth/LoginPage";
+import SignupPage from "./pages/auth/SignupPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/landing" replace />,
+    element: <Navigate to="/signup" replace />,
   },
   {
     path: "/landing",
@@ -22,9 +23,14 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
+
+  {
+    path: "/signup",
+    element: <SignupPage />,
+  },
   {
     path: "*",
-    element: <Navigate to="/landing" replace />,
+    element: <Navigate to="/signup" replace />,
   },
 ]);
 
